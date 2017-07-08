@@ -38,25 +38,21 @@
 
         <div class="row">
             <div class="col-md-6">
-                <div>
-                    <div class="radio-inline">
-                        <label><input type="radio" id="radio-popierius" value="popierius"
-                                      name="tipas">Popierinis</label>
-                    </div>
-                    <div class="radio-inline">
-                        <label><input type="radio" id="radio-tekstile" value="tekstile" name="tipas">Tekstilinis</label>
-                    </div>
-                    <div class="radio-inline">
-                        <label><input type="radio" id="radio-lipnus" value="lipnus" name="tipas">Lipnus</label>
-                    </div>
-                </div>
+                <fieldset>
+                    <label class="radio-inline"><input type="radio" id="radio-popierius" value="popierius"
+                                  name="tipas">Popierinis </label>
+                    <label class="radio-inline"> <input type="radio" id="radio-tekstile" value="tekstile" name="tipas"> Tekstilinis </label>
+                    <label class="radio-inline"><input type="radio" id="radio-lipnus" value="lipnus" name="tipas"> Lipnus </label>
+                    <label for="tipas" class="error"></label>
+                </fieldset>
             </div>
         </div>
 
         <div class="row" id="uzsakyti-kliju" style="display: none">
             <div class="col-md-3">
-                <div class="checkbox">
-                    <label><input type="checkbox" value="kliju" name="order-glue"> Užsakyti klijus</label>
+                <div class="checkbox input-group">
+                    <label><input type="checkbox" class="checkbox" value="kliju" name="order-glue">
+                        Užsakyti klijus</label>
                 </div>
                 <div class="input-group">
                     <span class="input-group-addon" id="addon-kiekis">Rekomenduojamas klijų kiekis</span>
