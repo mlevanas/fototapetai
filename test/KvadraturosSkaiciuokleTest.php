@@ -21,7 +21,7 @@ class KvadraturosSkaiciuokleTest extends TestCase {
 
 
 	protected function setUp() {
-		$this->skaiciuokle = new \Fototapetai\KvadraturosSkaiciuokle();
+		$this->skaiciuokle = new KvadraturosSkaiciuokle();
 	}
 
 	/**
