@@ -1,0 +1,126 @@
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Fototapetai</title>
+    <meta content="application/http" charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js">
+    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+<div class="container">
+    <form id="order-form" method="post" action="">
+        <div class="row">
+            <h3>Naujas užsakymas</h3>
+
+            <div class="col-md-6">
+                <div class="input-group">
+                    <span class="input-group-addon" id="addon-code">Kodas</span>
+                    <label>
+                        <input type="text" readonly="readonly" value="XXXXX" class="form-control"
+                               aria-describedby="addon-code">
+                    </label>
+                </div>
+                <br>
+                <div class="input-group">
+                    <span class="input-group-addon" id="addon-aukstis">Aukštis</span>
+                    <input type="number" min="0" name="aukstis" class="form-control" placeholder="cm"
+                           aria-describedby="addon-aukstis">
+                    <span class="input-group-addon" id="addon-plotis">Plotis</span>
+                    <input type="number" min="0" name="plotis" class="form-control" placeholder="cm"
+                           aria-describedby="addon-plotis">
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div>
+                    <div class="radio-inline">
+                        <label><input type="radio" id="radio-popierius" value="popierius"
+                                      name="tipas">Popierinis</label>
+                    </div>
+                    <div class="radio-inline">
+                        <label><input type="radio" id="radio-tekstile" value="tekstile" name="tipas">Tekstilinis</label>
+                    </div>
+                    <div class="radio-inline">
+                        <label><input type="radio" id="radio-lipnus" value="lipnus" name="tipas">Lipnus</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" id="uzsakyti-kliju" style="display: none">
+            <div class="col-md-3">
+                <div class="checkbox">
+                    <label><input type="checkbox" value="kliju" name="order-glue"> Užsakyti klijus</label>
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon" id="addon-kiekis">Rekomenduojamas klijų kiekis</span>
+                    <input type="number" placeholder="l" class="form-control" readonly aria-describedby="addon-kiekis">
+                </div>
+            </div>
+        </div>
+        <div class="row" id="kaina">
+            <div class="col-md-3">
+                Viso mokėti: <span style="font-size: large">0,00 Eur</span>
+            </div>
+        </div>
+        <div class="row">
+            <h4>Kliento informacija</h4>
+            <div class="col-md-6">
+                <div class="input-group">
+                    <span class="input-group-addon" id="addon-vardas">Vardas</span>
+                    <input type="text" name="vardas" class="form-control" placeholder="Vardas"
+                           aria-describedby="addon-vardas">
+                </div>
+                <br>
+                <div class="input-group">
+                    <span class="input-group-addon" id="addon-pavarde">Pavardė</span>
+                    <input type="text" name="pavarde" class="form-control" placeholder="Pavardė"
+                           aria-describedby="addon-vardas">
+                </div>
+                <br>
+                <div class="input-group">
+                    <span class="input-group-addon" id="addon-miestas">Miestas</span>
+                    <input type="text" class="form-control" name="miestas" placeholder="Miestas"
+                           aria-describedby="addon-miestas">
+                </div>
+                <br>
+                <div class="input-group">
+                    <span class="input-group-addon" id="addon-adresas">Adresas</span>
+                    <input type="text" class="form-control" placeholder="Adresas" name="adresas"
+                           aria-describedby="addon-adresas" required="required">
+                </div>
+                <br>
+                <div class="input-group">
+                    <span class="input-group-addon" id="postal-code">Pašto kodas</span>
+                    <input type="text" name="pasto_kodas"
+                           placeholder="Pašto kodas"
+                           class="form-control"
+                           aria-describedby="postal-code">
+                </div>
+                <br>
+                <div class="input-group">
+                    <span class="input-group-addon" id="email">E. paštas</span>
+                    <input type="text" name="email"
+                           placeholder="jūsų@epaštas.lt"
+                           class="form-control"
+                           aria-describedby="email">
+                </div>
+            </div>
+        </div> <!-- kliento informacija -->
+        <br>
+        <div class="input-group">
+            <input type="submit" class="btn btn-primary" name="checkout" value="Užsakyti">
+        </div>
+    </form>
+</div> <!-- container -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+</body>
+</html>
